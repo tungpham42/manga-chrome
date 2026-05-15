@@ -1,0 +1,20 @@
+{
+  "name": "Manga Reader & Notifier",
+  "description": "Read manga and get notified of new chapters.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open Manga Reader"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "alarms", "notifications"],
+  "host_permissions": [
+    "*://api.mangadex.org/*",
+    "*://auth.mangadex.org/*",
+    "*://uploads.mangadex.org/*",
+    "*://*.mangadex.network/*"
+  ]
+}
